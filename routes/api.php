@@ -18,5 +18,5 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/gituser/{name}', [GitHubUserSearch::class, 'getUserSearch']);
+Route::get('/gituser/{name}/{page}', [GitHubUserSearch::class, 'getUserSearch']);
 
